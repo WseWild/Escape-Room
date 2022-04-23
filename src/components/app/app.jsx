@@ -4,6 +4,7 @@ import {
   Route,
   BrowserRouter as Router,
 } from 'components/common/common';
+import { AppRoute } from '../../const';
 import DetailedQuest from 'components/detailed-quest/detailed-quest';
 import Contacts from 'components/contacts/contacts';
 import Home from 'components/home/home';
@@ -15,13 +16,13 @@ const App = () => (
     <S.GlobalStyle />
     <Router>
       <Switch>
-        <Route exact path="/quest">
+        <Route exact path={AppRoute.DetailedQuest}>
           <DetailedQuest />
         </Route>
-        <Route exact path="/contacts">
+        <Route exact path={AppRoute.Contacts}>
           <Contacts />
         </Route>
-        <Route path="/">
+        <Route path={AppRoute.Root}>
           <Home />
         </Route>
       </Switch>
